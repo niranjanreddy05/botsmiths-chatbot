@@ -26,7 +26,7 @@ function App() {
         console.error("Error warming up:", error);
       }
     }
-  
+
     warmUp();
   }, []);
 
@@ -136,10 +136,10 @@ function App() {
   return (
     <>
       <div className={`app-container ${showModal ? 'blur-background' : ''}`}>
-          <div className="navbar">
+        <div className="navbar">
           <div className="chatbot-title">AI Chatbot</div>
-          </div>
-          <div className="content">
+        </div>
+        <div className="content">
 
           {!showChat ? (
             <div className="initial-view">
@@ -170,9 +170,8 @@ function App() {
                   {messages.map((msg, index) => (
                     <div
                       key={index}
-                      className={`message ${
-                        msg.isUser ? 'user-message' : 'bot-message'
-                      }`}
+                      className={`message ${msg.isUser ? 'user-message' : 'bot-message'
+                        }`}
                     >
                       {msg.isLoading ? (
                         <div className="loading-dots">
