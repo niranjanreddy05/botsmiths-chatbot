@@ -27,7 +27,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('E:/my codes/PROJECTS/SIH 2024/webapp/Frontend/public/3201272.jpg');
+  background-image: url('/public/3201272.jpg');
   background-size: cover;
   /* Ensures the image covers the entire div */
   background-position: center;
