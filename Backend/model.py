@@ -128,7 +128,7 @@ class ImageChatbot:
         gc.collect()
 
 model_paths = {
-    'yolo': r"yolov10m.pt",
+    'yolo': r"./models/yolov10m.pt",
     'git_processor': "microsoft/git-large-coco",
     'git_model': "microsoft/git-large-coco",
     'llm_tokenizer': "google/flan-t5-base",
