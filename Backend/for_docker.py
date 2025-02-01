@@ -139,6 +139,7 @@ chatbot = ImageChatbot(model_paths)
 
 @app.route('/warmup', methods=['GET'])
 def warmup():
+    cleanup()
     result = chatbot.load_models()
     return jsonify({"status": result})
 
