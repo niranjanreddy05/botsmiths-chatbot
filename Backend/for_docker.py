@@ -17,7 +17,14 @@ import io
 warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "https://botsmiths-chatbot.vercel.app/",
+            "http://localhost:3000"
+        ]
+    }
+})
 
 class ImageChatbot:
     def __init__(self, model_paths: Dict[str, str]):
@@ -164,4 +171,4 @@ def process_message():
     return jsonify({"response": response})
 
 if __name__ == "__main__":
-    app.run(debug=True, port=3000)
+    app.run(host='0.0.0.0', port=7860)

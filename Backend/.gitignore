@@ -3,3 +3,5 @@ yolov10l.pt
 modelnew.py
 model.py
 models
+.dockerignore
+Dockerfile
