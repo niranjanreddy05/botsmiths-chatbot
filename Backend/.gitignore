@@ -5,3 +5,4 @@ model.py
 models
 .dockerignore
 Dockerfile
+for_docker.py
