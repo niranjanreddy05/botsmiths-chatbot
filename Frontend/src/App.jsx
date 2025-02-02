@@ -10,6 +10,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
   const chatMessagesRef = useRef(null);
   const fileInputRef = useRef(null);
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
   useEffect(() => {
     if (chatMessagesRef.current) {
@@ -20,7 +21,7 @@ function App() {
   useEffect(() => {
     async function warmUp() {
       try {
-        const response = await axios.get('http://localhost:3000/warmup');
+        const response = await axios.get(`${API_URL}/warmup`);
         console.log(response);
       } catch (error) {
         console.error("Error warming up:", error);
@@ -49,7 +50,7 @@ function App() {
       addMessage(null, false, true);
 
       try {
-        const response = await axios.post('http://localhost:3000/send-to-flask', {
+        const response = await axios.post(`${API_URL}/send-to-flask`, {
           prompt: message,
           image: image,
         });

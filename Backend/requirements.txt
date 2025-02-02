@@ -6,3 +6,4 @@ Pillow==9.5.0
 ultralytics==8.0.0
 numpy==1.23.5
 waitress==2.1.2
+Werkzeug==2.2.2
